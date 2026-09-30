@@ -1,13 +1,23 @@
 import random
-import prompt   
+import prompt
 
 number = random.randint(1, 100)
 
-print(f"Answer:{number}")
+Answer = ""
 
-if number % 2 == 0:
-    correct_answer = "yes"
+if number %2 ==0:
+    Answer = "yes"
+else:   
+    Answer = "no"
+    
+print(f"Question: {number}")
+
+ 
+Answe1 = prompt.string("Your answer: ")
+
+if Answe1 == Answer:
+    print("Correct!")  
 else:
-    correct_answer = "no"
-
-print(f"correct answer: {correct_answer}")
+    print(f"'{Answe1}' is wrong answer ;(. Correct answer was '{Answer}'.")
+    
+    
